@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "vsphere-env"
+version = "0.1.0"
+description = ""
+authors = ["Pirateparty99"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+ansible = "^11.4.0"
+ansible-dev-tools = "^25.4.0"
+
+# Common jinja-filter requirements:
+netaddr = "^1.3.0"
+jmespath = "^1.0.1"
+
+# Common module requirements:
+pywinrm = "^0.5.0"
+paramiko = "^3.5.1"
+passlib = "^1.7.4"
+requests = "^2.32.3"
+pyYAML = ">=3.11"
+
+# Active Directory module requirements:
+pyspnego = {extras = ["kerebros"], version = ">=0.8.0"}
+sansldap = "^0.1.0"
+dnspython = "^2.7.0"
+dpapi-ng = "^0.2.0"
+cryptography = ">=3.1"
+# cryptography = "^44.0.2"
+
+# Docker module requirements:
+docker = ">=2.0.0"
+pyOpenSSL = "^25.0.0"
+
+# Kubernetes module requirements:
+kubernetes = ">=24.2.0"
+requests-oauthlib = "^2.0.0"
+jsonpatch = "^1.33"
+
+# VMWare module requirements:
+pyVmomi = ">=8.0.3.0.1"
+# git+https://github.com/vmware/vsphere-automation-sdk-python.git
+aiohttp = "^3.11.16"
+
+# VMWare Community module requirements:
+vmware-vcenter = "^8.0.3.0"
+vmware-vapi-common-client = "^2.52.0"
+
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
